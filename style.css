@@ -71,4 +71,11 @@ small{
     position: absolute;
     left:50%;
     transform: translateX(-50%);
+    background: grey;
+    border:2px black;
+    color: #333:
+}
+
+.generi:focus{
+    outline: none;
 }
