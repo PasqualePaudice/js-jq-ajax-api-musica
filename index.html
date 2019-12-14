@@ -19,7 +19,7 @@
         <main>
             <select class="generi">
 
-                <option value="scegli">Scegi genere musicale</option>
+                <option value="scegli">Scegli genere musicale</option>
                 <option value="rock">Rock</option>
                 <option value="pop">Pop</option>
                 <option value="jazz">Jazz</option>
@@ -36,7 +36,7 @@
 
         <script id="template-card" type="text/x-handlebars-template">
 
-                <div class="card">
+                <div class="card"   data-genere="{{ genere }}">
                     <img src="{{ copertina }}"  alt="">
 
                     <p class="titolo">{{ titolo }}</p>

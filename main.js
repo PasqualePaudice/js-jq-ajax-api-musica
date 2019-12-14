@@ -19,12 +19,55 @@ $(document).ready(function(){
                     copertina:oggetto.poster,
                     titolo : oggetto.title,
                     autore: oggetto.author,
-                    anno : oggetto.year
+                    anno : oggetto.year,
+                    genere : oggetto.genre
 
                 };
 
                 $('.container').append(card_function(elementi_cards));
             };
+
+            $('.generi').change(function(){
+
+                var genereSelezionato= $('.generi').val();
+
+                if (genereSelezionato == 'scegli') {
+                    $('.card').fadeIn();
+                }else{
+
+                    $('.card').each(function(){
+
+                        var genere = $(this).attr("data-genere");
+
+                        console.log(genere);
+
+                        if (genere.toLowerCase() == genereSelezionato.toLowerCase()) {
+                            $(this).fadeIn();
+                        }else{
+                            $(this).hide();
+                        }
+
+
+
+                    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+                }
+
+
+
+            });
 
 
 
